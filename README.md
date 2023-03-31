@@ -14,10 +14,6 @@ Installation
 
     Clone or download this repository to your computer.
     Install the required packages: pip install selenium.
-    Download the corresponding webdriver for your browser and operating system:
-        Chrome: https://chromedriver.chromium.org/downloads
-        Firefox: https://github.com/mozilla/geckodriver/releases
-    Place the webdriver in the same folder as the snap.py script.
     Run the script: python snap.py.
 
 Usage
