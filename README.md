@@ -13,7 +13,7 @@ Requirements
 Installation
 
     Clone or download this repository to your computer.
-    Install the required packages: pip install selenium.
+    Install the required packages: pip3 install selenium.
     Run the script: python snap.py.
 
 Usage
