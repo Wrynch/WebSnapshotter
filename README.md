@@ -20,7 +20,6 @@ Usage
 
     When prompted, enter the URL of the website you want to take a screenshot of.
     Choose the browser(s) you want to use: Chrome, Firefox or both.
-    Choose whether to accept cookies or not.
     The script will take a screenshot of the website and save it in the Snapshot folder in the parent directory of the WebSnapshotter folder.
     You can find the screenshot(s) with the name browsername_screenshot.png in the Snapshot folder.
 
