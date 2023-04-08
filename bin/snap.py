@@ -9,11 +9,29 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 from PIL import Image
 
+logo = "\033[33m" + """
+
+ __    __     _     __                       _           _   _            
+/ / /\ \ \___| |__ / _\_ __   __ _ _ __  ___| |__   ___ | |_| |_ ___ _ __ 
+\ \/  \/ / _ \ '_ \\ \| '_ \ / _` | '_ \/ __| '_ \ / _ \| __| __/ _ \ '__|
+ \  /\  /  __/ |_) |\ \ | | | (_| | |_) \__ \ | | | (_) | |_| ||  __/ |   
+  \/  \/ \___|_.__/\__/_| |_|\__,_| .__/|___/_| |_|\___/ \__|\__\___|_|   
+                                  |_|                                     
+
+                     
+""" + "\033[0m"
+# clear console command
+def clear(): return os.system('cls' if os.name == 'nt' else 'clear')
+
+# clear the console on program launch
+clear()
+print(logo)
+
 # Get user input for the URL
-url = input("Enter the URL to capture: ")
+url = input("📷 Enter the URL to capture: ")
 
 # Get browser choice from user
-choice = input("Enter 1 to use Chrome, 2 to use Firefox, or 3 to use both: ")
+choice = input("⚡ Enter 1 to use Chrome, 2 to use Firefox, or 3 to use both: ")
 
 # Set the path to the Snapshot folder
 snapshot_folder = os.path.abspath(os.path.join(
@@ -32,7 +50,7 @@ for file_name in os.listdir(snapshot_folder):
         if os.path.isfile(file_path):
             os.unlink(file_path)
     except Exception as e:
-        print(f"Failed to delete {file_path}. Reason: {e}")
+        print(f"⛔ Failed to delete {file_path}. Reason: {e}")
 
 if choice == '1' or choice == '3':
     # Detect the installed Chrome version
@@ -65,9 +83,9 @@ if choice == '1' or choice == '3':
             chrome_driver_path = driver_path
         else:
             raise Exception(
-                "Could not find appropriate version of ChromeDriver")
+                "⛔ Could not find appropriate version of ChromeDriver")
     else:
-        raise Exception("Could not detect installed Chrome version")
+        raise Exception("⛔ Could not detect installed Chrome version")
     # Open Chrome and navigate to YouTube
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')  # enable headless mode
